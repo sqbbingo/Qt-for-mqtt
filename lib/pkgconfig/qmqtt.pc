@@ -1,0 +1,14 @@
+prefix=F:/software/QT/5.6/mingw49_32
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: qmqtt
+Description: qmqtt module
+Version: 1.0.0
+Libs: -L${libdir} -lqmqtt 
+Libs.private: -LC:\utils\postgresql\pgsql\lib -LC:\utils\my_sql\my_sql\lib -LF:\software\QT\5.6\mingw49_32\lib F:\software\QT\5.6\mingw49_32\lib\libQt5Network.a F:\software\QT\5.6\mingw49_32\lib\libQt5Core.a .obj\release\qmqtt_resource_res.o   
+Cflags: -I${includedir}/qmqtt -I${includedir}
+Requires: Qt5Core Qt5Network
+
