@@ -44,35 +44,195 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>200</y>
+      <y>260</y>
       <width>271</width>
       <height>291</height>
      </rect>
     </property>
    </widget>
-   <widget class="Line" name="line">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>190</y>
-      <width>881</width>
+      <x>330</x>
+      <y>50</y>
+      <width>361</width>
+      <height>184</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="Public_verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Toplic to Public:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Pushlish_pushButton">
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="text">
+          <string>Pushlish</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Toplic_public_lineEdit"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>QoS:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Public_Qos">
+         <item>
+          <property name="text">
+           <string>0 - Almost Once</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1 - Atleast Once</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2 - Exactly Once</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="Public_message_textEdit"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>260</y>
+      <width>361</width>
+      <height>289</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="Subscribe_verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Toplic to subscribe:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Subscribe_pushButton">
+         <property name="text">
+          <string>Subscribe</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Subscribe_lineEdit"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>QoS:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Subscribe_Qos">
+         <item>
+          <property name="text">
+           <string>0 - Almost Once</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1 - Atleast Once</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2 - Exactly Once</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="SubscribeMessage_Rece"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>240</y>
+      <width>161</width>
       <height>16</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
+    <property name="text">
+     <string>Mqtt client states:</string>
     </property>
    </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>52</x>
-      <y>20</y>
+      <x>50</x>
+      <y>30</y>
       <width>262</width>
-      <height>175</height>
+      <height>205</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="mqtt_message_verticalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Mqtt Version:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="mqtt_version_comboBox">
+         <item>
+          <property name="text">
+           <string>3.1.1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3.1.0</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -202,170 +362,15 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>50</y>
-      <width>361</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="Public_verticalLayout">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_8">
-       <item>
-        <widget class="QLabel" name="label_7">
-         <property name="text">
-          <string>Toplic to Public:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="Pushlish_pushButton">
-         <property name="focusPolicy">
-          <enum>Qt::StrongFocus</enum>
-         </property>
-         <property name="text">
-          <string>Pushlish</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="Toplic_public_lineEdit"/>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_7">
-       <item>
-        <widget class="QLabel" name="label_8">
-         <property name="text">
-          <string>QoS:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="Public_Qos">
-         <item>
-          <property name="text">
-           <string>0 - Almost Once</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>1 - Atleast Once</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2 - Exactly Once</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="Public_message_textEdit"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>201</y>
-      <width>361</width>
-      <height>289</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="Subscribe_verticalLayout">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_9">
-       <item>
-        <widget class="QLabel" name="label_9">
-         <property name="text">
-          <string>Toplic to subscribe:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="Subscribe_pushButton">
-         <property name="text">
-          <string>Subscribe</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="Subscribe_lineEdit"/>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_10">
-       <item>
-        <widget class="QLabel" name="label_10">
-         <property name="text">
-          <string>QoS:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="Subscribe_Qos">
-         <item>
-          <property name="text">
-           <string>0 - Almost Once</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>1 - Atleast Once</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2 - Exactly Once</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QTextBrowser" name="SubscribeMessage_Rece"/>
-     </item>
-    </layout>
-   </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
    <zorder>connect_pushButton</zorder>
    <zorder>disconnect_pushButton</zorder>
-   <zorder>Pushlish_pushButton</zorder>
-   <zorder>label</zorder>
-   <zorder>label_2</zorder>
-   <zorder>label_3</zorder>
-   <zorder>IN_Usernae</zorder>
-   <zorder>label_4</zorder>
-   <zorder>IN_Client_ID</zorder>
-   <zorder>label_5</zorder>
-   <zorder>IN_Password</zorder>
-   <zorder>label_6</zorder>
-   <zorder>IN_Timeout</zorder>
-   <zorder>Host_comboBox</zorder>
-   <zorder>Port_comboBox</zorder>
-   <zorder>label_7</zorder>
-   <zorder>Toplic_public_lineEdit</zorder>
-   <zorder>label_8</zorder>
-   <zorder>Public_Qos</zorder>
-   <zorder>Public_message_textEdit</zorder>
-   <zorder>label_9</zorder>
-   <zorder>Subscribe_pushButton</zorder>
-   <zorder>label_10</zorder>
-   <zorder>Subscribe_Qos</zorder>
-   <zorder>SubscribeMessage_Rece</zorder>
-   <zorder>Subscribe_Qos</zorder>
-   <zorder>Subscribe_lineEdit</zorder>
    <zorder>show_state_browser</zorder>
-   <zorder>line</zorder>
+   <zorder>label_11</zorder>
+   <zorder>mqtt_version_comboBox</zorder>
+   <zorder>label_12</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

@@ -10,7 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     client=new QMQTT::Client();//初始化QMQTT客户端指针
-
+    ui->Host_comboBox->setEditable(true);
+    ui->Port_comboBox->setEditable(true);
     ui->disconnect_pushButton->hide();
 
     connect(client,SIGNAL(connected()),this,SLOT(mqtt_connected()));
@@ -40,7 +41,10 @@ void MainWindow::on_connect_pushButton_clicked()
     client->setUsername(ui->IN_Usernae->text());//设置一个客户端用户名
     client->setPassword(password);//设置一个客户端密码
     client->cleanSession();//清除缓存
-    client->setVersion(QMQTT::MQTTVersion::V3_1_1);
+    if (ui->mqtt_version_comboBox->currentIndex() == 0)
+        client->setVersion(QMQTT::MQTTVersion::V3_1_1);//设置mqtt版本
+    else if (ui->mqtt_version_comboBox->currentIndex() == 1)
+        client->setVersion(QMQTT::MQTTVersion::V3_1_0);
     client->connectToHost();//连接EMQ代理服务器
 
     ui->connect_pushButton->hide();

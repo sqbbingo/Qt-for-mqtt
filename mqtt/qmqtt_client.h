@@ -58,7 +58,7 @@ static const quint8 LIBRARY_VERSION_REVISION = 1;
 
 enum MQTTVersion
 {
-    V3_1_0 = 4,
+    V3_1_0 = 3,
     V3_1_1 = 4
 };
 
